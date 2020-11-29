@@ -7,6 +7,7 @@ run sudo update-initramfs -u to update initramfs
 run sudo cat /sys/module/nvidia_drm/parameters/modeset to confirm
 
 
+sudo apt install gnome-tweaks		SET TO DARK
 sudo apt install vim
 sudo apt install git
 git config --global user.email
