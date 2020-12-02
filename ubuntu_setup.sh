@@ -1,5 +1,10 @@
 apt update
 apt upgrade
+echo "Fixing nvidia-card screen tearing issues"
+echo "options nvidia-drm modeset=1" >> /etc/modprobe.d/nvidia-drm-nomodeset.conf
+update initramfs -u
+echo "Veryify this outputs Y"
+cat /sys/module/nvidia_drm/parameters/modeset
 echo "Installing vim"
 apt install vim
 echo "Installing gnome tweaks, remember to set theme to dark"
